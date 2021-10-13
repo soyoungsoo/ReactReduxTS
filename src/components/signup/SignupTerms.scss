@@ -1,0 +1,77 @@
+#SignupTerms {
+    padding: 46px 0 87px 0;
+    min-height: calc(100vh - 30px);
+
+    .box {
+        margin: auto;
+        padding: 38px 40px 26px 40px;
+        width: 740px;
+        //height: 370px;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+
+        .title {
+          margin-bottom: 7px;
+          font-size: 30px;
+          font-family: NanumSquareOTF_acB;
+          line-height: 30px;
+          color: #606060;
+        }
+
+        .desc {
+          margin-bottom: 51px;
+          font-size: 14px;
+          font-family: NanumSquareOTF_acB;
+          color: #a1a1a1;
+          white-space: pre;
+        }
+
+        .wrap_terms {
+            .terms {
+                &_header {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  height: 24px;
+
+                   &_title {
+                      font-size: 12px;
+                      font-family: NanumSquareOTF_acB;
+                      color: #343434;
+                   }
+                }
+
+                &_content {
+                    padding: 10px;
+                    width: 660px;
+                    height: 140px;
+                    font-size: 11px;
+                    line-height: 18px;
+                    color: #343434;
+                    border: 1px solid #d8d8d8;
+                    overflow-y: scroll;
+                }
+            }
+
+            .terms+.terms {
+                margin-top: 20px;
+            }
+        }
+
+        .btn_checkbox {
+            height: 24px;
+            font-size: 14px;
+            color: #343434;
+
+            label {
+                margin-left: 5px;
+            }
+        }
+
+        .btn_all_check {
+            margin: 20px 0 10px 0;
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+div[id^="Signup"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 30px - 140px);
+    background-color: rgba(240, 240, 240, 0.2);
+
+    .btn_next {
+        margin: auto;
+        display: block;
+        width: 114px;
+        height: 43px;
+        color: #ffffff;
+        border-radius: 4px;
+        background-color: #4593f5;
+    }
+}

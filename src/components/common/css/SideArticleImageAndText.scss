@@ -1,0 +1,50 @@
+#SideArticleImageAndText {
+  @import "src/function.scss";
+  @import "src/color.scss";
+  padding: 15px 10px;
+  width: 375px;
+  border: 1px solid $border-color;
+
+  .side_title {
+    margin-bottom: 17px;
+    font-size: 20px;
+    font-family: NanumSquareOTF_acEB;
+  }
+
+  .list {
+    li {
+      margin: 5px;
+
+      a {
+        padding: 5px 6px;
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        height: 76px;
+        border-bottom: 1px solid #f0f0f0;
+
+        .rank {
+          width: 24px;
+          line-height: 24px;
+          font-size: 18px;
+          font-family: NanumSquareOTF_acEB;
+          color: $blue-color;
+          text-align: center;
+        }
+
+        .title {
+          width: 210px;
+          font-family: NanumSquareOTF_acEB;
+          font-size: 14px;
+          @include text-ellipsis(2);
+        }
+
+        img {
+          width: 100px;
+          height: 65px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

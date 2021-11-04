@@ -1,0 +1,46 @@
+@font-face {
+  font-family: NanumSquareOTF_acR;
+  src: url("assets/font/NanumSquareOTF_acR.otf"), url("assets/font/NanumSquareOTF_acR.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: NanumSquareOTF_acB;
+  src: url("assets/font/NanumSquareOTF_acB.otf"), url("assets/font/NanumSquareOTF_acB.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: NanumSquareOTF_acEB;
+  src: url("assets/font/NanumSquareOTF_acEB.otf"), url("assets/font/NanumSquareOTF_acEB.ttf") format("truetype");
+}
+
+@import "icons.scss";
+
+* {
+  font-family: NanumSquareOTF_acR;
+  color: #343434;
+}
+
+body {
+  min-width: 1280px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #eaeaea;
+  border-radius: 2px;
+}
+
+div::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+div::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+div::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+
+.ir_txt {
+  font-size: 0;
+}

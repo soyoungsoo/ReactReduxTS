@@ -1,0 +1,16 @@
+#DashBoardTemplate {
+  width: 80vw;
+
+  .dashBoard_title {
+    padding-left: 20px;
+    font-size: 18px;
+    font-family: NanumSquareOTF_acEB;
+    line-height: 60px;
+    box-shadow: 0 2px 2px 0 rgba(52, 52, 52, 0.2);
+    background-color: #fff;
+  }
+
+  > div:not(.dashBoard_title) {
+    height: calc(100% - 60px);
+  }
+}

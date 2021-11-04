@@ -1,0 +1,65 @@
+footer {
+  @import "src/color.scss";
+  padding: 31px 0 12px 0;
+  background-color: #ffffff;
+  border-top: 1px solid $border-color;
+
+  .footer_area {
+    margin: auto;
+    width: 1280px;
+  }
+
+  .info_area {
+    display: flex;
+    align-content: center;
+
+    .logo {
+      margin-right: 53px;
+      width: 150px;
+      height: 28px;
+      font-size: 22px;
+      font-family: NanumSquareOTF_acB;
+    }
+
+    .info {
+      width: 715px;
+      font-size: 12px;
+      line-height: 20px;
+      color: $white-gray-color;
+    }
+  }
+
+  .desc_area {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    .link {
+      a {
+        position: relative;
+      }
+
+      a+a {
+        margin-left: 30px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -15px;
+          width: 1px;
+          height: 12px;
+          background-color: $white-gray-color;
+        }
+      }
+    }
+
+    p,
+    a {
+      font-size: 12px;
+      line-height: 20px;
+      color: $white-gray-color;
+    }
+  }
+}

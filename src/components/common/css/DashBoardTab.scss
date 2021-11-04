@@ -1,0 +1,80 @@
+#DashBoardTab {
+  @import "src/color.scss";
+  @import "src/function.scss";
+  display: inline-block;
+  min-width: 250px;
+  width: 20vw;
+  @include min-height(false);
+  background-color: rgba(240, 240, 240, 0.2);
+
+  .dash_title {
+    font-size: 18px;
+    font-family: NanumSquareOTF_acEB;
+    line-height: 60px;
+    color: #ffffff;
+    text-align: center;
+    background-color: $blue-color;
+  }
+
+  .tab_list {
+    margin-top: 5px;
+
+    li {
+      line-height: 49px;
+      cursor: pointer;
+    }
+
+    .tab_item {
+      .tab_title {
+        padding-left: 50px;
+        font-size: 16px;
+        font-family: NanumSquareOTF_acEB;
+        border-left: 4px solid #959595;
+        background: url("../../../assets/image/common/ic-default-home.svg") no-repeat 15px center;
+      }
+
+      &.active {
+        .tab_title {
+          color: $blue-color;
+          border-left-color: $blue-color;
+          background-image: url("../../../assets/image/common/ic-blue-home.svg");
+          background-color: rgba(129, 202, 233, 0.1);
+        }
+
+        .child_tab_list {
+          display: block;
+        }
+      }
+
+      .child_tab_list {
+        display: none;
+
+        .child_tab_item {
+          position: relative;
+          padding-left: 50px;
+          font-size: 14px;
+          font-family: NanumSquareOTF_acB;
+          color: $font-gray-color;
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $white-gray-color;
+          }
+
+          &.active {
+            &:before {
+              background-color: $blue-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

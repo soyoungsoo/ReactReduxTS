@@ -1,0 +1,22 @@
+@mixin text-ellipsis($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin min-height($showMenubar:true) {
+  $header-height: 30px;
+  $menu-height: 60px;
+  $footer-height: 155px;
+
+  $result_menu_show: calc(100vh - #{$header-height} - #{$menu-height} - #{$footer-height});
+  $result_menu_hide: calc(100vh - #{$header-height} - #{$footer-height});
+
+  @if $showMenubar {
+    min-height: $result_menu_show;
+  } @else {
+    min-height: $result_menu_hide;
+  }
+}

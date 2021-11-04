@@ -6,7 +6,7 @@ import 'regenerator-runtime/runtime';
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 import 'core-js/features/string/repeat';
-import App from './components/App';
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/common.scss";
-import "./SignupTerms.scss";
+import "./css/SignupTerms.scss";
 
 function SignupTerms() {
     return (

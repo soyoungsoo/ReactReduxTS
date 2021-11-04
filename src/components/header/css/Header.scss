@@ -1,0 +1,26 @@
+header {
+  @import "src/color.scss";
+  position: sticky;
+  top: 0;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  background-color: #ffffff;
+  z-index: 2;
+
+  .btn_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 74px;
+
+    li {
+      font-size: 12px;
+      font-family: NanumSquareOTF_acB;
+      letter-spacing: 0;
+      color: $white-gray-color;
+    }
+  }
+}

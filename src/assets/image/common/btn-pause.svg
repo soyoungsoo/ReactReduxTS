@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 16</title>
+    <g id="로그인-전-Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home_로그인-전-메인_연차료조회" transform="translate(-1112.000000, -704.000000)">
+            <g id="Group-10" transform="translate(1050.000000, 704.000000)">
+                <g id="Group-16" transform="translate(62.000000, 0.000000)">
+                    <rect id="Rectangle-Copy-9" fill-opacity="0.3" fill="#D8D8D8" x="0" y="0" width="28" height="28" rx="4"></rect>
+                    <g id="Group" transform="translate(2.000000, 2.000000)" stroke="#606060" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <g id="Path" transform="translate(12.000000, 12.500000) rotate(90.000000) translate(-12.000000, -12.500000) translate(7.000000, 8.000000)">
+                            <line x1="0" y1="0.5" x2="10" y2="0.5"></line>
+                            <line x1="0" y1="8.5" x2="10" y2="8.5"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

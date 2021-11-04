@@ -1,0 +1,20 @@
+#SignupInput {
+    @import "src/_color.scss";
+
+    .box {
+        padding: 38px 30px 26px 30px;
+        width: 388px;
+    }
+
+    .btn_check {
+        width: 69px;
+    }
+
+    .btn_search {
+        width: 95px;
+    }
+
+    .btn_next {
+        margin-top: 22px;
+    }
+}

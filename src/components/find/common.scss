@@ -1,0 +1,39 @@
+div[id^="Find"] {
+  .box {
+    padding: 38px 30px 26px 30px;
+    width: 388px;
+  }
+
+  .input_phone {
+    input {
+      padding-right: 105px;
+    }
+  }
+
+  .find_data {
+    &_info {
+      font-size: 22px;
+      line-height: 1.36;
+      font-family: NanumSquareOTF_acB;
+      text-align: center;
+      word-break: break-word;
+    }
+
+    &.find_data_pw {
+      margin-bottom: 51px;
+    }
+  }
+
+  .btn_verify {
+    width: 95px;
+  }
+
+  .btn_next {
+    margin-top: 20px;
+  }
+
+  .btn_login {
+    margin-top: 40px;
+    width: 175px;
+  }
+}

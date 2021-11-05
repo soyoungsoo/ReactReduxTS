@@ -1,6 +1,10 @@
 #SignupInput {
     @import "src/_color.scss";
 
+    .has_button {
+        padding-right: 80px;
+    }
+
     .box {
         padding: 38px 30px 26px 30px;
         width: 388px;
@@ -8,6 +12,11 @@
 
     .btn_check {
         width: 69px;
+
+        &.use {
+            opacity: 0.3;
+            pointer-events: none;
+        }
     }
 
     .btn_search {

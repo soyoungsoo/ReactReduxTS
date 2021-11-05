@@ -3,8 +3,10 @@ import "./css/Menubar.scss";
 import {Link} from "react-router-dom";
 
 function Menubar() {
+    
     return (
         <div id="Menubar">
+
             <ul className="depth1">
                 <li>
                     HOME

@@ -1,8 +1,11 @@
 import React from "react";
+import {Link, RouteComponentProps} from "react-router-dom";
 import "./css/common.scss";
 import "./css/SignupSuccess.scss";
+import qs from "query-string";
 
-function SignupSuccess() {
+function SignupSuccess({location}: RouteComponentProps) {
+    const {id, name} = qs.parse(location.search);
     return (
         <div id="SignupSuccess">
             <div className="box">
@@ -11,16 +14,16 @@ function SignupSuccess() {
 
                 <div className="wrap_input">
                     <div className="input_box">
-                        <p className="input">이름</p>
+                        <p className="input">{name}</p>
                         <label htmlFor="user_name">이름</label>
                     </div>
                     <div className="input_box">
-                        <p className="input">h2h2h2h2i@gmail.com</p>
+                        <p className="input">{id}</p>
                         <label htmlFor="user_id">아이디</label>
                     </div>
                 </div>
 
-                <button className="btn_next">로그인 하러가기</button>
+                <Link to="login" className="btn_next">로그인 하러가기</Link>
             </div>
         </div>
     )

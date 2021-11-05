@@ -2,7 +2,7 @@ import React from "react";
 import {Route} from "react-router-dom";
 
 function RouteExcept({component: Component, ...parentProps}) {
-    const exceptPath = ['/reporter'];
+    const exceptPath = ['/signup', '/reporter'];
     return (
         <Route
             {...parentProps}

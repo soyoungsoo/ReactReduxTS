@@ -1,8 +1,36 @@
-import React from "react";
+import React, {MouseEvent, useState} from "react";
 import "./css/common.scss";
 import "./css/SignupTerms.scss";
+import _ from "lodash";
 
-function SignupTerms() {
+export interface Props {
+    funcNext: () => void;
+}
+
+function SignupTerms({funcNext}: Props) {
+    const [allCheck, setAllCheck] = useState(false);
+    const [agreeList, setAgreeList] = useState([false, false, false]);
+
+    const onClickAllCheck = () => {
+        setAllCheck(!allCheck);
+        setAgreeList([!allCheck, !allCheck, !allCheck]);
+    };
+
+    const onClickCheck = (event: MouseEvent , index: number) => {
+        let copy = _.cloneDeep(agreeList);
+        let target = event.target as HTMLInputElement;
+        copy[index] = target!.checked;
+        setAgreeList(copy);
+    };
+
+    const onClickNext = () => {
+        if (agreeList.findIndex(item => !item) === -1) {
+            funcNext();
+        } else {
+            alert("약관에 동의해주세요");
+        }
+    };
+
     return (
         <div id="SignupTerms">
             <div className="box">
@@ -14,7 +42,7 @@ function SignupTerms() {
                         <div className="terms_header">
                             <h2 className="terms_header_title">이용약관동의 (필수)</h2>
                             <div className="btn_checkbox">
-                                <input type="checkbox" id="terms1"/>
+                                <input type="checkbox" id="terms1" checked={agreeList[0]} onClick={(event) => onClickCheck(event, 0)}/>
                                 <label htmlFor="terms1">동의함</label>
                             </div>
                         </div>
@@ -31,7 +59,7 @@ function SignupTerms() {
                         <div className="terms_header">
                             <h2 className="terms_header_title">이용약관동의 (필수)</h2>
                             <div className="btn_checkbox">
-                                <input type="checkbox" id="terms2"/>
+                                <input type="checkbox" id="terms2" checked={agreeList[1]} onClick={(event) => onClickCheck(event, 1)}/>
                                 <label htmlFor="terms2">동의함</label>
                             </div>
                         </div>
@@ -48,7 +76,7 @@ function SignupTerms() {
                         <div className="terms_header">
                             <h2 className="terms_header_title">이용약관동의 (필수)</h2>
                             <div className="btn_checkbox">
-                                <input type="checkbox" id="terms3"/>
+                                <input type="checkbox" id="terms3" checked={agreeList[2]} onClick={(event) => onClickCheck(event, 2)}/>
                                 <label htmlFor="terms3">동의함</label>
                             </div>
                         </div>
@@ -63,12 +91,12 @@ function SignupTerms() {
                     </div>
 
                     <div className="btn_checkbox btn_all_check">
-                        <input type="checkbox" id="terms_all_agree"/>
+                        <input type="checkbox" id="terms_all_agree" checked={allCheck} onClick={onClickAllCheck}/>
                         <label htmlFor="terms_all_agree">모두 동의합니다</label>
                     </div>
                 </div>
 
-                <button className="btn_next">다음</button>
+                <button className="btn_next" onClick={onClickNext}>다음</button>
             </div>
         </div>
     )

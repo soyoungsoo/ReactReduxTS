@@ -17,10 +17,13 @@ header {
     column-gap: 74px;
 
     li {
-      font-size: 12px;
-      font-family: NanumSquareOTF_acB;
-      letter-spacing: 0;
-      color: $white-gray-color;
+      p,
+      a {
+        font-size: 12px;
+        font-family: NanumSquareOTF_acB;
+        letter-spacing: 0;
+        color: $white-gray-color;
+      }
     }
   }
 }

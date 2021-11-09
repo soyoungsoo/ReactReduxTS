@@ -8,11 +8,11 @@ function RouteExcept({component: Component, ...parentProps}) {
             {...parentProps}
             render={props => {
                 const pathname = props.history.location.pathname;
-                let result = exceptPath.findIndex(item => item == pathname);
+                let result = exceptPath.findIndex(item => item == pathname) === -1;
                 return (
                     result
-                        ? <Component {...props}/>
-                        : null
+                    ? <Component {...props}/>
+                    : null
                 )
             }}
         />

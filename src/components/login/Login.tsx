@@ -15,9 +15,9 @@ function Login({history}: RouteComponentProps) {
     const [login, setLogin] = useState<LoginType>({id: "", password: ""});
 
     const onChangeLogin = (key: string, value: string) => {
-        let copyLogin = _.cloneDeep(login);
-        copyLogin[key as keyof LoginType] = value;
-        setLogin(copyLogin);
+        let copy = _.cloneDeep(login);
+        copy[key as keyof LoginType] = value;
+        setLogin(copy);
     };
 
     const onClickLogin = async () => {
@@ -25,7 +25,7 @@ function Login({history}: RouteComponentProps) {
             let result = await MemberAPI.login(login);
             let success = result.status === 200;
             if (success) {
-                sessionStorage.setItem("token", result.token);
+                sessionStorage.setItem("token", result.data.token);
                 history.push("/");
             } else {
                 setLoginError(true);

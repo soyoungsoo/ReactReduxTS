@@ -88,7 +88,7 @@ function SignupInput({funcNext}: Props) {
                 return;
             }
 
-            let result = await MemberAPI.signup(signup);
+            let result = await MemberAPI.mediaSignup(signup);
             let success = result.status === 200;
             if (success) funcNext(`&id=${signup.id}&name=${signup.name}`);
         }

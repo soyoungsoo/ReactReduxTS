@@ -6,7 +6,6 @@
 
   .title {
     margin-bottom: 30px;
-    padding-top: 20px;
     font-size: 20px;
     font-family: NanumSquareOTF_acEB;
     line-height: 24px;
@@ -27,11 +26,15 @@
   }
 
   select {
-    min-width: 100px;
+    min-width: 150px;
+
+    &.media {
+      width: 305px;
+    }
   }
 
   .form {
-    padding: 0 20px 30px 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     row-gap: 8px;
@@ -95,22 +98,38 @@
   }
 
   .library {
-    padding: 0 20px;
+    padding: 20px;
     min-width: 340px;
     width: 25vw;
     border-left: 1px solid $border-color;
 
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+
+      .btn_add {
+        width: 56px;
+        height: 32px;
+        font-size: 12px;
+        font-family: NanumSquareOTF_acB;
+        color: #ffffff;
+        border-radius: 4px;
+        background-color: $blue-color;
+      }
+    }
+
     .lib_image_title,
     .lib_file_title {
-      margin-bottom: 18px;
       font-size: 14px;
       font-family: NanumSquareOTF_acEB;
-      line-height: 18px;
+      line-height: 32px;
     }
 
     .lib_image_area {
 
       .lib_image_list {
+        margin-top: 15px;
         display: flex;
         align-content: center;
         flex-wrap: wrap;

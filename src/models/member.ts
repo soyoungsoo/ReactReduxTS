@@ -1,7 +1,7 @@
 export interface LoginType {
     id: string,
     password: string,
-};
+}
 
 export interface SignupType extends LoginType {
     name: string, // 이름(string)

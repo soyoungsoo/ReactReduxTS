@@ -29,7 +29,7 @@
     background: $background-white-gray-color url("../../../assets/image/common/ic-double-arrow-right.svg") no-repeat center
   }
 
-  a {
+  button {
     display: block;
     width: 36px;
     height: 36px;
@@ -47,10 +47,11 @@
       color: #ffffff;
       border-color: transparent;
       background-color: $blue-color;
+      pointer-events: none;
     }
   }
 
-  .cursor_not {
-    cursor: not-allowed;
+  .not_click {
+    pointer-events: none;
   }
 }

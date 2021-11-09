@@ -9,16 +9,16 @@ function Menubar() {
 
             <ul className="depth1">
                 <li>
-                    HOME
+                    <Link to="/">HOME</Link>
                 </li>
                 <li>
-                    Enhance News
+                    <Link to="/section/e">Enhance News</Link>
                 </li>
                 <li>
-                    Social Impact
+                    <Link to="/section/e">Social Impact</Link>
                 </li>
                 <li>
-                    Govermence
+                    <Link to="/">Govermence</Link>
                 </li>
                 <li>
                     <div className="tool">

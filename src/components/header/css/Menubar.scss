@@ -13,8 +13,11 @@
     li {
       min-width: 250px;
       width: 250px;
-      font-size: 16px;
-      cursor: pointer;
+      a {
+        display: block;
+        font-size: 16px;
+        line-height: 59px;
+      }
     }
   }
 

@@ -29,7 +29,6 @@ function App() {
                     <Route path="/signup" component={SignupContainer} exact/>
                     <Route path="/section/e" component={SectionE} exact/>
                     <Route path="/section/e/:idx" component={SectionEDetail} exact/>
-
                     <Route path="/reporter" component={ReporterContainer} exact/>
                 </Switch>
             </div>

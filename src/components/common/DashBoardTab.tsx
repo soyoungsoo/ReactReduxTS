@@ -5,6 +5,7 @@ export interface Props {
     tab: Tab;
     activeDepth1: number;
     activeDepth2: number;
+    onChangeMenuTab: (index: number) => void
 };
 
 export interface Tab {
@@ -17,7 +18,7 @@ export interface Item {
     child: string[]
 }
 
-function DashBoardTab({tab, activeDepth1, activeDepth2}: Props) {
+function DashBoardTab({tab, activeDepth1, activeDepth2, onChangeMenuTab}: Props) {
     return (
         <div id="DashBoardTab">
             <div className="dash_title">{tab.title}</div>
@@ -29,7 +30,7 @@ function DashBoardTab({tab, activeDepth1, activeDepth2}: Props) {
                                 <h2 className="tab_title">{item.title}</h2>
                                 <ul className="child_tab_list">
                                 {
-                                    item.child.map((item2, idx2) => <li className={`child_tab_item ${activeDepth2 == idx2 ? 'active' : ''}`}>{item2}</li>)
+                                    item.child.map((item2, idx2) => <li className={`child_tab_item ${activeDepth2 == idx2 ? 'active' : ''}`} onClick={() => onChangeMenuTab(idx2)}>{item2}</li>)
                                 }
                                 </ul>
                             </li>

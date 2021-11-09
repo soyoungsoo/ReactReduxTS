@@ -9,6 +9,7 @@ import SideArticleImageAndText from "../common/SideArticleImageAndText";
 
 function Home() {
     const sliderRef = useRef();
+
     const banner = {
         dots: true,
         infinite: true,
@@ -35,12 +36,12 @@ function Home() {
 
     return (
         <div id="Home">
-            <div className="banner">
-                <Slider {...banner}>
-                    <img src="#" alt="배너 이미지" className="banner"/>
-                    <img src="#" alt="배너 이미지" className="banner"/>
-                </Slider>
-            </div>
+            {/*<div className="banner">*/}
+            {/*    <Slider {...banner}>*/}
+            {/*        <img src="#" alt="배너 이미지" className="banner"/>*/}
+            {/*        <img src="#" alt="배너 이미지" className="banner"/>*/}
+            {/*    </Slider>*/}
+            {/*</div>*/}
             <div className="wrap wrap_article">
                 <div className="article_area">
                     <div className="area_head">

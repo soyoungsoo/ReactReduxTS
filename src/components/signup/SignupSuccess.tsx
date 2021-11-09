@@ -1,10 +1,12 @@
 import React from "react";
-import {Link, RouteComponentProps} from "react-router-dom";
+import {Link} from "react-router-dom";
 import "./css/common.scss";
 import "./css/SignupSuccess.scss";
 import qs from "query-string";
+import {useLocation} from "react-router";
 
-function SignupSuccess({location}: RouteComponentProps) {
+function SignupSuccess() {
+    const location = useLocation();
     const {id, name} = qs.parse(location.search);
     return (
         <div id="SignupSuccess">

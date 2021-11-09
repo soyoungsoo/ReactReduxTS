@@ -3,10 +3,11 @@ import {AxiosResponse, AxiosError, AxiosRequestConfig} from "axios";
 const axios = require('axios');
 
 const instance = axios.create({
-    baseURL: config.url,
+    baseURL: (`https://findw.co.kr/api`) || window.location.host,
     timeout: config.timeout,
     headers: {
-        'x-token':  sessionStorage.getItem('token'), 'Cache-Control': 'no-cache',
+        'x-token':  sessionStorage.getItem('token'),
+        'Cache-Control': 'no-cache',
         'Pragma': 'no-cache',
         'Expires': '0'
     }
@@ -37,7 +38,7 @@ const responseBody = (response: AxiosResponse) => response;
 const responseError = (err: AxiosError) => err.response?.data;
 
 const requests = {
-    get: (url: string, param: {}) => instance.get(url, {params: param}).then(responseBody).catch(responseError),
+    get: (url: string, param?: {}) => instance.get(url, {params: param}).then(responseBody).catch(responseError),
     post: (url: string, body: {}) => instance.post(url, body).then(responseBody).catch(responseError),
     patch: (url: string, body: {}) => instance.patch(url, body).then(responseBody).catch(responseError),
     delete: (url: string) => instance.delete(url).then(responseBody).catch(responseError),

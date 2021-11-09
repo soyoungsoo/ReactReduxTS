@@ -1,18 +1,19 @@
 import React, {useEffect} from "react";
-import { RouteComponentProps } from 'react-router-dom';
 import DashBoardTab from "../common/DashBoardTab";
 import DashBoardTemplate from "../common/DashBoardTemplate";
 import ReporterNewsAdd from "./ReporterNewsAdd";
 import qs from "query-string";
 import ReporterNewsSaveList from "./ReporterNewsSaveList";
 import ReporterNewsList from "./ReporterNewsList";
+import {useHistory, useLocation} from "react-router";
 
-function ReporterContainer({location}: RouteComponentProps) {
-    const type = Number(qs.parse(location.search).type || 1);
-
-    const isAdd = type === 1;
-    const isNewsSave = type === 2;
-    const isNewsList = type === 3;
+function ReporterContainer() {
+    const history = useHistory();
+    const location = useLocation();
+    const depth2 = Number(qs.parse(location.search).depth2 || 0);
+    const isAdd = depth2 === 0;
+    const isNewsSave = depth2 === 1;
+    const isNewsList = depth2 === 2;
 
     let dashBoardTab = {
         title: "기자 대시보드",
@@ -32,12 +33,22 @@ function ReporterContainer({location}: RouteComponentProps) {
         // window.onbeforeunload = () => true;
     }, []);
 
+    const onChangeMenuTab = (depth: number) => {
+        history.push(`?depth2=${depth}`);
+    }
+
     return (
         <div id="ReporterContainer" style={{display: "flex"}}>
-            <DashBoardTab tab={dashBoardTab} activeDepth1={0} activeDepth2={0}/>
-            {/*<DashBoardTemplate title="기사 관리" Component={ReporterNewsAdd}/>*/}
-            {/*<DashBoardTemplate title="기사 관리" Component={ReporterNewsSaveList}/>*/}
-            <DashBoardTemplate title="기사 관리" Component={ReporterNewsList}/>
+            <DashBoardTab tab={dashBoardTab} activeDepth1={0} activeDepth2={depth2} onChangeMenuTab={onChangeMenuTab}/>
+            {
+                isAdd && <DashBoardTemplate title={dashBoardTab.list[0].title} Component={ReporterNewsAdd}/>
+            }
+            {
+                isNewsSave && <DashBoardTemplate title={dashBoardTab.list[0].title} Component={ReporterNewsSaveList}/>
+            }
+            {
+                isNewsList && <DashBoardTemplate title={dashBoardTab.list[0].title} Component={ReporterNewsList}/>
+            }
         </div>
     )
 }

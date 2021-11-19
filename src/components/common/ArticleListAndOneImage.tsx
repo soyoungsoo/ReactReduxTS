@@ -40,5 +40,4 @@ function ArticleListAndOneImage({title, list}: Props) {
         </div>
     )
 }
-
 export default ArticleListAndOneImage;

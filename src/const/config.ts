@@ -1,6 +1,5 @@
-let real_url = 'https://www.nowmedia.co.kr';
-let test_url = 'https://www.nowmedia.co.kr';
-let base = window.location.href.indexOf(real_url) > -1 ? real_url : window.location.href.indexOf(test_url) > -1 ? test_url : real_url;
+let base = window.location.origin.indexOf("localhost") || window.location.origin.indexOf("192") > -1 ? "https://findw.co.kr" : window.location.origin;
+// let base = window.location.origin;
 
 export default {
     url: base + '/api',

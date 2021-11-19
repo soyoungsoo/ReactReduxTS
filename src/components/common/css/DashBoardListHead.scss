@@ -1,0 +1,86 @@
+#DashBoardListHead {
+  @import "src/color.scss";
+  margin-top: 40px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+
+  &.center {
+    justify-content: center;
+    column-gap: 120px;
+  }
+
+  .all_select_area {
+    display: flex;
+    align-content: center;
+    column-gap: 14px;
+
+    label {
+      font-size: 14px;
+      font-family: NanumSquareOTF_acB;
+      line-height: 32px;
+      color: $color-Scorpion;
+
+      input {
+        margin-right: 8px;
+      }
+    }
+
+    button {
+      margin: auto;
+    }
+  }
+
+  .search_area {
+    display: flex;
+    align-content: center;
+    column-gap: 5px;
+
+    select,
+    input {
+      padding: 0 10px;
+      height: 32px;
+      font-size: 14px;
+      font-family: NanumSquareOTF_acEB;
+      border: 1px solid $color-Alto;
+      border-radius: 4px;
+    }
+
+    select {
+      width: 135px;
+    }
+
+    input {
+      width: 300px;
+    }
+  }
+
+  .count_area {
+    display: flex;
+    align-content: center;
+    column-gap: 15px;
+    line-height: 32px;
+
+    .txt {
+      font-size: 14px;
+      font-family: NanumSquareOTF_acEB;
+    }
+
+    .count {
+      font-size: 14px;
+    }
+  }
+
+  .btn_del {
+    width: 50px;
+    height: 24px;
+    font-size: 12px;
+    font-family: NanumSquareOTF_acB;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 9px;
+    background-color: $red-color;
+  }
+}

@@ -12,29 +12,29 @@
 
   .btn_first {
     margin-right: 5px;
-    background: $background-white-gray-color url("../../../assets/image/common/ic-double-arrow-left.svg") no-repeat center
+    background: $color-Alabaster url("../../../assets/image/common/ic-double-arrow-left.svg") no-repeat center
   }
 
   .btn_prev {
     border-right: transparent;
-    background: $background-white-gray-color url("../../../assets/image/common/ic-arrow-left.svg") no-repeat center
+    background: $color-Alabaster url("../../../assets/image/common/ic-arrow-left.svg") no-repeat center
   }
 
   .btn_last {
-    background: $background-white-gray-color url("../../../assets/image/common/ic-arrow-right.svg") no-repeat center
+    background: $color-Alabaster url("../../../assets/image/common/ic-arrow-right.svg") no-repeat center
   }
 
   .btn_next {
     margin-left: 5px;
-    background: $background-white-gray-color url("../../../assets/image/common/ic-double-arrow-right.svg") no-repeat center
+    background: $color-Alabaster url("../../../assets/image/common/ic-double-arrow-right.svg") no-repeat center
   }
 
   button {
     display: block;
     width: 36px;
     height: 36px;
-    border: 1px solid $border-color;
-    background-color: $background-white-gray-color;
+    border: 1px solid $color-Alto;
+    background-color: $color-Alabaster;
   }
 
   .number {

@@ -1,0 +1,214 @@
+#Comment {
+  @import "src/color.scss";
+
+  .input_comment {
+    padding: 10px;
+    border-bottom: 1px solid $color-Alto;
+
+    .title {
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-family: NanumSquareOTF_acEB;
+      line-height: 28px;
+
+      span {
+        font-family: NanumSquareOTF_acB;
+      }
+    }
+  }
+
+  .editor {
+    border: 1px solid $color-Alto;
+
+    &_info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 34px;
+      border-bottom: 1px solid $color-Alto;
+      background-color: #ffffff;
+
+      &_user {
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+
+        .user_profile {
+          width: 24px;
+          height: 24px;
+        }
+
+        .nickname {
+          font-size: 12px;
+          font-family: NanumSquareOTF_acB;
+          color: $color-Dusty-Gray;
+        }
+      }
+
+      .word_count {
+        padding-right: 10px;
+        font-size: 12px;
+        font-family: NanumSquareOTF_acB;
+        color: $color-Dusty-Gray;
+      }
+    }
+
+    .editor_input {
+      padding: 14px 20px 10px 20px;
+      width: 100%;
+      height: 96px;
+      font-size: 14px;
+      line-height: 18px;
+      border: none;
+      resize: none;
+      outline: none;
+    }
+  }
+
+  .comment_item {
+    padding-bottom: 15px;
+    border-bottom: 1px solid $color-Alto;
+
+    .comment_head {
+      padding: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      border-bottom: 1px solid $color-Alto;
+
+      .user_info,
+      .comment_ctl {
+        display: flex;
+        align-content: center;
+      }
+
+      .user_info {
+        column-gap: 8px;
+        img {
+          width: 32px;
+          height: 32px;
+        }
+
+        p {
+          font-size: 14px;
+          font-family: NanumSquareOTF_acEB;
+          line-height: 32px;
+        }
+      }
+
+      .comment_ctl {
+        column-gap: 20px;
+
+        button,
+        p {
+          font-size: 12px;
+          font-family: NanumSquareOTF_acB;
+          color: $color-Dusty-Gray;
+        }
+
+        button {
+          position: relative;
+          background-color: transparent;
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            width: 1px;
+            height: 14px;
+            background-color: $color-Alto;
+          }
+        }
+
+        .btn_edit {
+          color: $blue-color;
+        }
+
+        .btn_delete {
+          color: $red-color;
+        }
+
+        p {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .comment_content {
+      padding: 5px;
+      min-height: 50px;
+      font-size: 14px;
+      line-height: 18px;
+
+      &.deleted {
+        font-size: 13px;
+        color: $color-Dusty-Gray;
+      }
+    }
+
+    .re_comment_ctl {
+      display: flex;
+      align-content: center;
+      column-gap: 5px;
+
+      button,
+      p {
+        font-size: 12px;
+        font-family: NanumSquareOTF_acB;
+        color: $color-Dusty-Gray;
+      }
+
+      button {
+        padding: 0 10px;
+        max-width: 65px;
+        height: 24px;
+        border-radius: 9px;
+        background-color: $color-Link-Water;
+      }
+
+      p {
+        line-height: 24px;
+      }
+    }
+  }
+
+  .re_comment_list {
+    background-color: $color-Gallery-opacity-2;
+
+    li {
+      padding: 0 10px 0 20px;
+
+      &.input_my {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .btn_register {
+    margin: 7px 0 0 auto;
+    display: block;
+    width: 62px;
+    height: 32px;
+    font-size: 12px;
+    font-family: NanumSquareOTF_acB;
+    color: #ffffff;
+    border-radius: 4px;
+    background-color: $blue-color;
+  }
+
+  .btn_hide,
+  .btn_more {
+    padding: 15px 0;
+    margin: auto;
+    display: flex;
+    align-content: center;
+    column-gap: 15px;
+    font-size: 14px;
+    font-family: NanumSquareOTF_acEB;
+    line-height: 18px;
+    background-color: transparent;
+  }
+}

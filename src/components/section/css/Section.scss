@@ -1,0 +1,74 @@
+#Section {
+  @import "src/color.scss";
+  @import "src/function.scss";
+  margin: auto;
+  padding: 30px 30px 50px 30px;
+  display: flex;
+  align-content: center;
+  column-gap: 15px;
+  max-width: 1280px;
+
+  .main_content {
+    .tab {
+      padding-bottom: 5px;
+      display: flex;
+      column-gap: 12px;
+      width: 781px;
+      height: 37px;
+      border-bottom: 1px solid #f0f0f0;
+
+      li {
+        position: relative;
+        cursor: pointer;
+
+        a {
+          position: relative;
+          display: block;
+          width: 134px;
+          font-size: 14px;
+          font-family: NanumSquareOTF_acEB;
+          line-height: 32px;
+          text-align: center;
+
+          &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -6px;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 14px;
+            border-right: 1px solid $color-Alto;
+          }
+        }
+
+        &:first-child {
+          &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 14px;
+            border-right: 1px solid $color-Alto;
+          }
+        }
+
+        &.active {
+          a {
+            color: $gnb-menu-active-color;
+          }
+        }
+      }
+    }
+
+    #ArticleList {
+      padding-top: 8px;
+    }
+  }
+
+  #ArticleList {
+    margin-bottom: 45px;
+  }
+}

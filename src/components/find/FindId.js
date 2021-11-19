@@ -1,23 +1,24 @@
 import React from "react";
 import "../signup/css/common.scss";
-import "./common.scss";
+import "./css/common.scss";
 import {Link} from "react-router-dom";
+import message from "../../const/message"
 
 function FindId() {
     const FindIDForm =
         <>
             <div className="wrap_input">
                 <div className="input_box">
-                    <input type="text" id="user_id" placeholder="입력하세요"/>
+                    <input type="text" id="user_id" placeholder={message.requireInput}/>
                     <label htmlFor="user_id">이름</label>
                 </div>
                 <div className="input_box input_phone">
-                    <input type="text" id="user_id" placeholder="입력하세요"/>
+                    <input type="text" id="user_id" placeholder={message.requireInput}/>
                     <label htmlFor="user_id">전화번호</label>
                     <button className="btn btn_verify">인증번호 받기</button>
                 </div>
                 <div className="input_box">
-                    <input type="text" id="user_id" placeholder="인증번호 6자리 숫자 입력"/>
+                    <input type="text" id="user_id" placeholder={message.requireAuthNumberSix}/>
                     <label htmlFor="user_id">인증번호</label>
                 </div>
             </div>

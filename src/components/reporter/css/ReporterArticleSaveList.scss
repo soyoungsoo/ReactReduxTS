@@ -1,0 +1,57 @@
+#ReporterArticleSaveList {
+  @import "src/color.scss";
+  padding: 20px;
+  min-width: 970px;
+
+  .saveList_title {
+    font-size: 20px;
+    font-family: NanumSquareOTF_acEB;
+  }
+
+  table {
+    margin-bottom: 45px;
+    width: 100%;
+
+    thead {
+      background-color: $table-head-background-color;
+
+      th {
+        font-family: NanumSquareOTF_acB;
+      }
+    }
+
+    th,
+    td {
+      height: 32px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    td {
+      border-bottom: 1px solid $color-Alto;
+    }
+
+    th:nth-of-type(3),
+    td:nth-of-type(3) {
+      padding-left: 10px;
+      text-align: left;
+    }
+  }
+
+  .btn_write {
+    width: 116px;
+    height: 24px;
+    background: url("../../../assets/image/common/btn-detai-write.svg") no-repeat;
+  }
+
+  .btn_del {
+    width: 50px;
+    height: 24px;
+    font-size: 12px;
+    font-family: NanumSquareOTF_acB;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 9px;
+    background-color: $red-color;
+  }
+}

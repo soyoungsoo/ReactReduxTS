@@ -1,9 +1,22 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import "./css/Header.scss";
 import {Link} from "react-router-dom";
+import MemberAPI from "../../api/member";
+import {MemberType} from "../../models/member";
+import {useDispatch} from "react-redux";
+import {setMember} from "../../features/member/memberSlice";
 
 function Header() {
+    const dispatch = useDispatch();
+    const [userName, setUserName] = useState("");
     const isLogin = sessionStorage.getItem("token");
+
+    useEffect(() => {
+        if (isLogin) MemberAPI.myInfo().then((res: MemberType) => {
+            setUserName(res.name);
+            dispatch(setMember(res))
+        })
+    }, []);
 
     const logout = () => {
         sessionStorage.removeItem("token");
@@ -11,17 +24,17 @@ function Header() {
 
     return (
         <header id="Header">
-            <div className="wrap_logo"/>
+            <Link to="/" className="logo">LOGO</Link>
             <ul className="btn_list">
                 {
                     isLogin
                     ?
                     <>
-                        {/*<li>*/}
-                        {/*    <p>OOO님 안녕하세요?</p>*/}
-                        {/*</li>*/}
                         <li>
-                            <Link to="/reporter" href="#">마이페이지</Link>
+                            <p>{userName}님 안녕하세요?</p>
+                        </li>
+                        <li>
+                            <Link to="/myPage">마이페이지</Link>
                         </li>
                         <li>
                             <Link to="/" href="#" onClick={logout}>로그아웃</Link>

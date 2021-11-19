@@ -1,0 +1,55 @@
+#ArticleReporter {
+  @import "src/color";
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
+
+  .content {
+    width: 845px;
+
+    .reporter_info {
+      margin: 10px 0 35px 0;
+      padding: 25px 15px;
+      display: flex;
+      align-content: center;
+      column-gap: 11px;
+      border-top: 1px solid $color-Gallery;
+      border-bottom: 1px solid $color-Gallery;
+
+      .profile_image {
+        object-fit: contain;
+      }
+
+      .inner {
+        h2 {
+          margin-bottom: 10px;
+          font-size: 30px;
+          font-family: NanumSquareOTF_acEB;
+        }
+
+        p {
+          font-size: 14px;
+          font-family: NanumSquareOTF_acB;
+          color: $color-Scorpion;
+        }
+      }
+    }
+
+    #ArticleListAndOneImage {
+      .left_content {
+        .title {
+          font-size: 20px;
+          color: $color-Mine-Shaft;
+        }
+      }
+    }
+
+    .reporter_recent {
+      h2 {
+        font-size: 20px;
+        font-family: NanumSquareOTF_acEB;
+      }
+    }
+  }
+}

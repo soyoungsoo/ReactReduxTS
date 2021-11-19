@@ -9,9 +9,15 @@ export default {
     },
 
     convertDate(date:number, defaultValue?: string) {
-        if (!date) return defaultValue || "N/A";
+        if (!date) return defaultValue || "";
         let convertDate = new Date(Number(date));
-        return convertDate.getFullYear() + '-' + (convertDate.getMonth() + 1).toString().padStart(2, '0') + '-' + convertDate.getDate().toString().padStart(2, '0');
+        return convertDate.getFullYear() + '.' + (convertDate.getMonth() + 1).toString().padStart(2, '0') + '.' + convertDate.getDate().toString().padStart(2, '0');
+    },
+
+    convertTime(date:number, defaultValue?: string) {
+        if (!date) return defaultValue || "";
+        let convertDate = new Date(Number(date));
+        return convertDate.getFullYear() + '-' + (convertDate.getMonth() + 1).toString().padStart(2, '0') + '-' + convertDate.getDate().toString().padStart(2, '0') + " " + convertDate.getHours().toString().padStart(2, '0') + ":" + convertDate.getMinutes().toString().padStart(2, '0')
     },
 
     convertFileSize(bytes: number, dp=1) {
@@ -34,6 +40,10 @@ export default {
 
     getImageCDN(url: string) {
         return variable.imageCDN + url;
+    },
+
+    removeHTML(str: string) {
+        return str.replace(/<[^>]*>/g, '');
     },
 
     readImage(data: Blob | File) {
@@ -69,5 +79,18 @@ export default {
             ia[i] = byteString.charCodeAt(i);
         }
         return new Blob([ab], {type: mimeString});
-    }
+    },
+
+    numberRegx(str: string) {
+        let regexp = /[^0-9]/g;
+
+        if (str.length === 0) {
+            str = str.substring(1);
+        }
+        return str.replace(regexp,'');
+    },
+
+    isEmptyObject(param: Object) {
+        return Object.keys(param).length === 0 && param.constructor === Object;
+    },
 }

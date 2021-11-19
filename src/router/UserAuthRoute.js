@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Redirect } from 'react-router-dom';
-import {CacheRoute} from "react-router-cache-route";
 
 function UserAuthRoute ({component: Component, auth, ...parentProps}) {
     if (!auth) {

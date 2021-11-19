@@ -1,0 +1,48 @@
+#ArticleListText {
+  @import "src/function.scss";
+  @import "src/color.scss";
+  padding: 15px 10px;
+  width: 375px;
+  border: 1px solid $color-Alto;
+
+  .side_title {
+    margin-bottom: 17px;
+    font-size: 20px;
+    font-family: NanumSquareOTF_acEB;
+  }
+
+  .list {
+    li {
+      a {
+        position: relative;
+        padding-left: 5px;
+        display: flex;
+        align-items: center;
+        height: 35px;
+        font-size: 14px;
+        font-family: NanumSquareOTF_acEB;
+        line-height: 18px;
+        border-bottom: 1px solid #f0f0f0;
+
+        &:before {
+          content: "";
+          position: relative;
+          left: 0;
+          margin: 0 9px;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $blue-color;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    li + li {
+      margin-top: 5px;
+    }
+  }
+}

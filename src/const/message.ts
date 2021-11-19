@@ -1,7 +1,23 @@
 export default {
+    pwdRule: "(영문 대소문자/숫자/특수문자 중 2가지 이상조합, 10~16자)",
+    pwdAllRequire: "비밀번호를 양식에 맞게 입력해주세요",
     placeholder: "입력하세요",
     checkID: "아이디 중복확인을 진행해주세요",
     checkEmail: "이메일 중복확인을 진행해주세요",
     onlyImageFile: "이미지 파일(jpg,jpeg,gif,png)만 업로드할 수 있습니다",
     choiceSection: "섹션을 선택해주세요",
+    choiceArticleOneMore: "기사를 1개 이상 선택해주세요",
+    successADDArticle: "기사가 등록되었습니다",
+    successSave: "저장되었습니다",
+    successChange: "변경되었습니다",
+    commentAlert: "권리침해, 욕설 및 특정 대상을 비하하는 내용을 게시할 경우, 이용약관 및 관련법률에 의해 제해될 수 있습니다. 공공기기에서는 사용 후 로그아웃 해주세요.",
+    requireLogin: "로그인해주세요",
+    requireInput: "입력하세요",
+    requireAuthNumberSix: "인증번호 6자리 숫자 입력",
+    notMaxLengthOver: "최대 입력가능 글자를 초과할 수 없습니다",
+    delete: "삭제하시겠습니까?",
+    deletedComment: "작성자에 의해 삭제된 댓글입니다",
+    confirm: "승인하시겠습니까?",
+    reject: "거절하시겠습니까?",
+    isIE: "본 서비스는 익스플로러 환경을 지원하지 않습니다\n원활한 사용을 위해 크롬, 엣지로 이용해주세요"
 };

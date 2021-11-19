@@ -1,0 +1,101 @@
+#AdminMemberInfoPopup {
+    @import "src/color";
+    @import "src/function";
+    padding: 20px 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: auto !important;
+    border: 1px solid $color-Alto;
+    background-color: #ffffff;
+    z-index: 1;
+
+    .head {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        border-bottom: 1px solid $color-Alto;
+
+        .title {
+            font-size: 20px;
+            font-family: NanumSquareOTF_acEB;
+            line-height: 22px;
+        }
+    }
+
+    .content {
+        margin: auto;
+        width: 328px;
+    }
+
+    .col {
+        .row {
+            border-bottom: 1px solid $color-Alto;
+
+            h2 {
+                margin-bottom: 4px;
+                font-size: 12px;
+                color: $color-Scorpion;
+            }
+
+            p {
+                padding: 6px 0;
+                height: 28px;
+                font-size: 14px;
+                line-height: 18px;
+
+                &.count {
+                    padding-right: 10px;
+                    text-align: right;
+                }
+
+                &.ellipsis {
+                    @include text-ellipsis(1);
+                }
+            }
+
+            select {
+                padding: 6px 0;
+                width: 100%;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    .col+.col {
+        margin-top: 25px;
+    }
+
+    .col2 {
+        display: flex;
+        align-content: center;
+        column-gap: 10px;
+
+        .row {
+            width: 50%;
+        }
+    }
+
+    .btn_save {
+        background-color: $blue-green-color;
+    }
+
+    .btn_confirm {
+        background-color: $blue-color;
+    }
+
+    .btn_save,
+    .btn_confirm {
+        margin: 25px auto 0 auto;
+        display: block;
+        width: 110px;
+        height: 43px;
+        color: #ffffff;
+        border-radius: 4px;
+    }
+}

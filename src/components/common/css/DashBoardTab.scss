@@ -54,7 +54,7 @@
           padding-left: 50px;
           font-size: 14px;
           font-family: NanumSquareOTF_acB;
-          color: $font-gray-color;
+          color: $color-Scorpion;
 
           &:before {
             content: "";
@@ -65,7 +65,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background-color: $white-gray-color;
+            background-color: $color-Dusty-Gray;
           }
 
           &.active {

@@ -1,5 +1,9 @@
 #SectionSide {
-  #SideArticleText {
+  position: sticky;
+  top: 90px;
+  max-height: 777px;
+
+  #ArticleListText {
     margin-bottom: 35px;
   }
 }

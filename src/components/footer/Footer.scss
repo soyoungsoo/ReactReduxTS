@@ -2,7 +2,7 @@ footer {
   @import "src/color.scss";
   padding: 31px 0 12px 0;
   background-color: #ffffff;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid $color-Alto;
 
   .footer_area {
     margin: auto;
@@ -25,7 +25,7 @@ footer {
       width: 715px;
       font-size: 12px;
       line-height: 20px;
-      color: $white-gray-color;
+      color: $color-Dusty-Gray;
     }
   }
 
@@ -50,7 +50,7 @@ footer {
           left: -15px;
           width: 1px;
           height: 12px;
-          background-color: $white-gray-color;
+          background-color: $color-Dusty-Gray;
         }
       }
     }
@@ -59,7 +59,7 @@ footer {
     a {
       font-size: 12px;
       line-height: 20px;
-      color: $white-gray-color;
+      color: $color-Dusty-Gray;
     }
   }
 }

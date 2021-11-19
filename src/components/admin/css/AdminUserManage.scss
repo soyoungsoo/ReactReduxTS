@@ -1,0 +1,48 @@
+#AdminUserManage {
+    @import "src/color";
+    padding: 20px;
+
+    .page_title {
+        font-size: 20px;
+        font-family: NanumSquareOTF_acEB;
+    }
+
+    .btns {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        column-gap: 5px;
+
+        button[class^="btn_"] {
+            width: 47px;
+            height: 24px;
+            font-size: 12px;
+            font-family: NanumSquareOTF_acB;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 9px;
+        }
+    }
+
+    .btn_info {
+        padding-left: 10px;
+        color: #959595 !important;
+        text-align: left !important;
+        background: url("../../../assets/image/common/ic-arrow-right-more.svg") no-repeat 85% 6px;
+        background-color: $color-Link-Water;
+    }
+
+    .btn_edit {
+        width: 47px;
+        height: 28px;
+        background: url("../../../assets/image/common/btn-edit.svg") no-repeat center;
+    }
+
+    .btn_del {
+        background-color: $red-color;
+    }
+
+    #Pagination {
+        margin-top: 20px;
+    }
+}

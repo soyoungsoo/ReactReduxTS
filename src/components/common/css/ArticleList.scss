@@ -1,0 +1,78 @@
+#ArticleList {
+  @import "src/function";
+  @import "src/color";
+
+  .item {
+    padding: 15px 10px;
+    display: flex;
+    align-content: center;
+    column-gap: 15px;
+    height: 150px;
+    border-bottom: 1px solid #f0f0f0;
+
+    img {
+      min-width: 160px;
+      width: 160px;
+      height: 120px;
+      object-fit: contain;
+      border: 1px solid #f0f0f0;
+    }
+
+    &_info {
+      position: relative;
+      width: 100%;
+
+      &_title {
+        margin-bottom: 5px;
+        font-size: 16px;
+        font-family: NanumSquareOTF_acEB;
+        line-height: 24px;
+        @include text-ellipsis(1);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &_desc {
+        font-size: 14px;
+        line-height: 18px;
+        @include text-ellipsis(3);
+      }
+
+      &_upload_info {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        column-gap: 12px;
+
+        p {
+          position: relative;
+          display: flex;
+          align-items: center;
+          column-gap: 4px;
+          font-size: 12px;
+          font-family: NanumSquareOTF_acB;
+          line-height: 24px;
+          color: $color-Dusty-Gray;
+        }
+
+        p + p {
+          &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -6px;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 14px;
+            border-right: 1px solid $color-Alto;
+          }
+        }
+      }
+    }
+  }
+}

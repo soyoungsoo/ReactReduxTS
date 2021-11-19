@@ -1,14 +1,14 @@
 import React, {useRef, useState} from "react";
 import "../signup/css/common.scss";
 import "./Login.scss";
-import {Link, RouteComponentProps} from "react-router-dom";
+import {Link} from "react-router-dom";
 import MemberAPI from "../../api/member/index";
-import {LoginType} from "../../models/member";
+import {LoginType, MemberType} from "../../models/member";
 import _ from "lodash";
 import validator from "../../util/validator";
 import message from "../../const/message";
 
-function Login({history}: RouteComponentProps) {
+function Login() {
     const idRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
     const [loginError, setLoginError] = useState(false);
@@ -22,14 +22,10 @@ function Login({history}: RouteComponentProps) {
 
     const onClickLogin = async () => {
         if (validator.CheckRefValue([idRef, passwordRef])) {
-            let result = await MemberAPI.login(login);
-            let success = result.status === 200;
-            if (success) {
-                sessionStorage.setItem("token", result.data.token);
-                history.push("/");
-            } else {
-                setLoginError(true);
-            }
+            MemberAPI.login(login).then((res: MemberType) => {
+                sessionStorage.setItem("token", res.token);
+                window.location.href = "/";
+            }).catch(() => setLoginError(true));
         }
     }
 

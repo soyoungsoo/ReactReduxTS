@@ -3,7 +3,7 @@ import {AxiosResponse, AxiosError, AxiosRequestConfig} from "axios";
 const axios = require('axios');
 
 const instance = axios.create({
-    baseURL: (`https://findw.co.kr/api`) || window.location.host,
+    baseURL: config.url,
     timeout: config.timeout,
     headers: {
         'x-token':  sessionStorage.getItem('token'),
@@ -23,6 +23,12 @@ instance.interceptors.response.use((response: AxiosResponse) => {
     if (error.response) {
         // 요청이 이루어졌으며 서버가 2xx의 범위를 벗어나는 상태 코드로 응답했습니다.
         alert(error.response.data.message);
+
+        let code = error.response.data.status;
+        if (code === 401) {
+            sessionStorage.removeItem('token');
+            window.location.href = '/login';
+        }
     } else if (error.request) {
         // 요청이 이루어 졌으나 응답을 받지 못했습니다.
         return Promise.reject(error.request);
@@ -34,14 +40,14 @@ instance.interceptors.response.use((response: AxiosResponse) => {
     return Promise.reject(error);
 });
 
-const responseBody = (response: AxiosResponse) => response;
-const responseError = (err: AxiosError) => err.response?.data;
+const responseBody = (response: AxiosResponse) => response.data;
 
 const requests = {
-    get: (url: string, param?: {}) => instance.get(url, {params: param}).then(responseBody).catch(responseError),
-    post: (url: string, body: {}) => instance.post(url, body).then(responseBody).catch(responseError),
-    patch: (url: string, body: {}) => instance.patch(url, body).then(responseBody).catch(responseError),
-    delete: (url: string) => instance.delete(url).then(responseBody).catch(responseError),
+    instance,
+    get: (url: string, param?: {}) => instance.get(url, {params: param}).then(responseBody),
+    post: (url: string, body?: {}, param?: {}) => instance.post(url, body, {params: param}).then(responseBody),
+    patch: (url: string, body?: {}) => instance.patch(url, body).then(responseBody),
+    delete: (url: string, body?: {}, param?: {}) => instance.delete(url, { data: body, params: param}).then(responseBody),
 };
 
 

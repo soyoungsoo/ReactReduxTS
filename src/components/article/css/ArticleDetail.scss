@@ -1,0 +1,213 @@
+#ArticleDetail {
+  @import "src/color.scss";
+  @import "src/function.scss";
+  margin: auto;
+  max-width: 1280px;
+
+  .header {
+    margin-bottom: 3px;
+    padding-top: 15px;
+    width: 1215px;
+
+    .header_post {
+      margin-bottom: 9px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #f0f0f0;
+
+      &_title {
+        padding-bottom: 2px;
+        width: 950px;
+        font-size: 30px;
+        font-family: NanumSquareOTF_acEB;
+        line-height: 40px;
+      }
+
+      .links {
+        padding-top: 5px;
+        display: flex;
+        column-gap: 15px;
+      }
+
+      &_info {
+        padding-left: 15px;
+        display: flex;
+        align-items: center;
+        column-gap: 14px;
+        height: 24px;
+
+        p {
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          span {
+            font-size: 12px;
+            color: $color-Dusty-Gray;
+          }
+        }
+
+        p+p {
+          &:before {
+            content: "";
+            position: absolute;
+            left: -5px;
+            width: 1px;
+            height: 14px;
+            background-color: $color-Alto;
+          }
+        }
+      }
+    }
+  }
+
+  .wrap_section {
+    padding: 35px 0 35px 20px;
+    display: flex;
+    column-gap: 45px;
+
+    .main_section {
+      width: 800px;
+
+      &_report {
+        margin: 30px 0 50px 0;
+        border-top: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f0f0f0;
+
+        &_wrap {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        &_info {
+          padding: 20px 5px 0 15px;
+          display: flex;
+          align-items: center;
+          column-gap: 11px;
+
+          img {
+            width: 46px;
+            height: 46px;
+            background-size: contain;
+          }
+
+          &_media {
+            font-size: 14px;
+            font-family: NanumSquareOTF_acEB;
+            line-height: 18px;
+          }
+
+          &_email {
+            position: relative;
+            font-size: 12px;
+            font-family: NanumSquareOTF_acB;
+            color: $color-Dusty-Gray;
+
+            &:before {
+              content: "";
+              position: absolute;
+              left: -5px;
+              width: 1px;
+              height: 14px;
+              background-color: $color-Alto;
+            }
+          }
+        }
+
+        &_copyright {
+          font-size: 12px;
+          font-family: NanumSquareOTF_acB;
+          line-height: 24px;
+          color: $color-Dusty-Gray;
+          text-align: right;
+        }
+
+        .btn_another_article {
+          width: 108px;
+          line-height: 24px;
+          font-size: 12px;
+          font-family: NanumSquareOTF_acB;
+          color: $color-Dusty-Gray;
+          text-align: center;
+          border-radius: 9px;
+          background-color: $color-Link-Water;
+        }
+      }
+
+      &_another_news {
+        margin-bottom: 45px;
+        padding: 5px 5px 5px 15px;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        .left_content {
+          width: 100%;
+          .title {
+            margin-bottom: 7px;
+            font-size: 16px;
+            font-family: NanumSquareOTF_acEB;
+            line-height: 28px;
+            color: $blue-color;
+          }
+          .list {
+            li {
+              a {
+                position: relative;
+                padding-left: 5px;
+                display: flex;
+                align-items: center;
+                min-width: 520px;
+                height: 35px;
+                border-bottom: 1px solid #f0f0f0;
+
+                &:before {
+                  content: "";
+                  position: relative;
+                  left: 0;
+                  margin: 0 9px;
+                  min-width: 6px;
+                  width: 6px;
+                  height: 6px;
+                  border-radius: 50%;
+                  background-color: $blue-color;
+                }
+
+                p {
+                  font-size: 14px;
+                  font-family: NanumSquareOTF_acEB;
+                  line-height: 18px;
+                  @include text-ellipsis(1);
+                }
+              }
+            }
+
+            li + li {
+              margin-top: 2px;
+            }
+          }
+        }
+
+        .right_content {
+          position: relative;
+          img {
+            width: 250px;
+            height: 219px;
+            background-color: rgba(0, 0, 0, 0.8);
+          }
+          .title {
+            position: absolute;
+            left: 10px;
+            bottom: 12px;
+            width: 230px;
+            font-size: 14px;
+            font-family: NanumSquareOTF_acEB;
+            line-height: 18px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

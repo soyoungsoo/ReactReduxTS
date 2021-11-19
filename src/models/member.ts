@@ -3,23 +3,36 @@ export interface LoginType {
     password: string,
 }
 
-export interface SignupType extends LoginType {
-    name: string, // 이름(string)
-    email: string, // 이메일(string)
-    phone?: string, // 전화번호(string)
-    mobile_phone: string, // 핸폰번호(string)
-    address: string, // 주소(string)
-    address_detail: string, // 상세주소(string)
-    postal_code: string // 우편번호(string)
+export interface MemberType extends LoginType {
+    [key: string]: number | string | Object
+    idx: number,
+    name: string,
+    email: string,
+    phone: string,
+    mobile_phone: string,
+    admin: number,
+    admin_level: number
+    created_at: number,
+    media_info: {
+        idx: number,
+        permission: number,
+        rank: number
+    },
+    token: string,
+    address: string,
+    address_detail: string
+    postal_code: string
 }
 
-export interface UpdateInfoType {
-    name?: string, // 이름(string)
-    password?: string, // 비밀번호(string)
-    email?: string, // 이메일(string)
-    phone?: string, // 전화번호(string)
-    mobile_phone?: string, // 휴대폰 번호(string)
-    address?: string, // 주소(string)
-    address_detail?: string, // 상세주소(string)
-    postal_code?: string // 우편번호(string)
+export enum MediaInfoType {
+    normalUser = 0, // 일반회원
+    normalUserStr = "일반회원",
+    reporter = 1, // 기자
+    reporterStr = "기자",
+    admin = 2, // 관리자
+    adminStr = "관리자",
+    mediaMaster = 3, // 미디어 마스터
+    mediaMasterStr = "미디어 마스터",
+    contractor = 4, // 계약자
+    contractorStr = "계약자"
 }

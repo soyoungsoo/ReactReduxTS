@@ -19,14 +19,14 @@ div[id^="Find"] {
             font-size: 30px;
             font-family: NanumSquareOTF_acB;
             line-height: 30px;
-            color: $font-gray-color;
+            color: $color-Scorpion;
         }
 
         .desc {
             margin-bottom: 51px;
             font-size: 14px;
             font-family: NanumSquareOTF_acB;
-            color: #a1a1a1;
+            color: $color-Silver-Chalice;
             white-space: pre;
         }
 
@@ -40,7 +40,7 @@ div[id^="Find"] {
                     margin-bottom: 4px;
                     display: block;
                     font-size: 12px;
-                    color: $font-gray-color;
+                    color: $color-Scorpion;
                 }
 
                 input,
@@ -50,7 +50,7 @@ div[id^="Find"] {
                     font-size: 14px;
                     line-height: 34px;
                     border: none;
-                    border-bottom: 1px solid $border-color;
+                    border-bottom: 1px solid $color-Alto;
 
                     &:focus {
                         outline: none;
@@ -116,7 +116,7 @@ div[id^="Find"] {
             margin-right: 16px;
             font-size: 14px;
             font-family: NanumSquareOTF_acB;
-            color: $font-gray-color;
+            color: $color-Scorpion;
         }
 
         a {

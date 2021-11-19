@@ -1,7 +1,8 @@
 import React from "react";
 import "../signup/css/common.scss";
-import "./common.scss";
+import "./css/common.scss";
 import {Link} from "react-router-dom";
+import message from "../../const/message"
 
 function FindPw() {
 
@@ -11,7 +12,7 @@ function FindPw() {
             <p className="desc">비밀번호를 찾고자 하는 아이디를 입력해 주세요.</p>
             <div className="wrap_input">
                 <div className="input_box input_phone">
-                    <input type="text" id="user_id" placeholder="입력하세요"/>
+                    <input type="text" id="user_id" placeholder={message.requireInput}/>
                     <label htmlFor="user_id">아이디</label>
                     <button className="btn">본인인증</button>
                 </div>
@@ -25,11 +26,11 @@ function FindPw() {
             <p className="desc">영문 대소문자/숫자/특수문자 중 2가지 이상조합, 10~16자</p>
             <div className="wrap_input">
                 <div className="input_box input_phone">
-                    <input type="text" id="user_id" placeholder="입력하세요"/>
+                    <input type="text" id="user_id" placeholder={message.requireInput}/>
                     <label htmlFor="user_id">새로운 비밀번호</label>
                 </div>
                 <div className="input_box input_phone">
-                    <input type="text" id="user_id" placeholder="입력하세요"/>
+                    <input type="text" id="user_id" placeholder={message.requireInput}/>
                     <label htmlFor="user_id">비밀번호 확인</label>
                 </div>
             </div>
